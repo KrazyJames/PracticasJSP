@@ -1,0 +1,131 @@
+<!--<%-- 
+    Document   : carro
+    Created on : 12/03/2019, 08:15:35 PM
+    Author     : jimmy
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Carrito</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/pizza.css">
+        <script src="bootstrap/bootstrap-4.3.1-dist/js/jQuery-v3.1.1.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid sinBorde">
+                <nav id="menuNav" class="navbar fixed-top navbar-expand-lg navbar-dark bg-verde">
+                    <div class="container">
+
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="menu.html">
+                                <img src="img/logo2.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                                Tony's Pizza
+                                </a>
+                            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="menu.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="carro.html"><i class="fas fa-shopping-cart"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><span class="badge"><i class="fas fa-user"></i></span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+
+                <!-- Tabla de pedidos -->
+                <div class="container contenedorPrincipal">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Dirección del envío:</p>
+                            <input type="text" readonly class="form-control-plaintext dirEnvio" value="Direccion de envio">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row w-100">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Articulo</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Mexicana</th>
+                                    <td>1</td>
+                                    <td>150.00</td>
+                                    <td>150.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Mexicana</th>
+                                    <td>1</td>
+                                    <td>150.00</td>
+                                    <td>150.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Mexicana</th>
+                                    <td>1</td>
+                                    <td>150.00</td>
+                                    <td>150.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <div class="row justify-content-end">
+                        <div class="col-4">
+                            <div class="row w-75 mx-auto">
+                                <button type="button" class="btn btn-warning rounded-pill w-100">
+                                    <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" />
+                                </button>
+                            </div>
+                            <div class="row w-75 mx-auto">
+                                <ul class="list-group list-group-horizontal formasPago">
+                                    <li class="list-group-item"><a href=""><i class="fab fa-cc-visa fa-3x"></i></a></li>
+                                    <li class="list-group-item"><a href=""><i class="fab fa-cc-mastercard fa-3x"></i></a></li>
+                                    <li class="list-group-item"><a href=""><i class="fab fa-cc-amex fa-3x"></i></a></li>
+                                    <li class="list-group-item"><a href=""><i class="fab fa-cc-discover fa-3x"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <br>
+        <footer>
+            <div class="container">
+                <ul class="list-group list-group-horizontal float-right">
+                    <li class="list-group-item"><a href="fb.com"><i class="fab fa-instagram fa-2x socialLink"></i></a></li>
+                    <li class="list-group-item"><a href="fb.com"><i class="fab fa-facebook-square fa-2x socialLink"></i></a></li>
+                    <li class="list-group-item"><a href="fb.com"><i class="fab fa-twitter-square fa-2x socialLink"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+        <script src="bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    </body>
+</html>

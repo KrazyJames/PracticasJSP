@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.bg-verde{
+    background-color: green;
+}
+.vertical{
+    margin: 5% auto;
+}
