@@ -1,10 +1,20 @@
-<!--<%-- 
+<%-- 
     Document   : menu
     Created on : 12/03/2019, 08:15:25 PM
     Author     : jimmy
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>-->
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if(Boolean.valueOf(request.getParameter("logout"))){
+        session.setAttribute("id",null);
+        session.setAttribute("nombre",null);
+        session.setAttribute("correo",null);
+        session.setAttribute("direccion",null);
+        session.setAttribute("perfil",null);
+        session=null;
+    }
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,7 +55,27 @@
                                 <a class="nav-link" href="carro.html"><i class="fas fa-shopping-cart"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><span class="badge"><i class="fas fa-user"></i></span></a>
+                                <%
+                                    if(session!=null && session.getAttribute("nombre")!=null){
+                                %>
+                                <a class="nav-link" href="profile.jsp"><%=session.getAttribute("nombre")%><span class="badge"><i class="fas fa-user"></i></span></a>
+                                <%
+                                    }else{ %>
+                                      <a class="nav-link" href="login.jsp">Login<span class="badge"><i class="fas fa-user"></i></span></a>
+                                <%
+                                    
+                                    }
+                                %>
+                                            
+                            </li>
+                            <li class="nav-item">
+                                <%
+                                    if(session!=null && session.getAttribute("nombre")!=null){
+                                %>
+                                <a class="nav-link" href="menu.jsp?logout=true">Salir</a>
+                                <%
+                                    }
+                                    %>
                             </li>
                         </ul>
                     </div>
